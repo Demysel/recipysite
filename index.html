@@ -3,50 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
+    <title>Suggestion de Recettes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Recipe Finder</h1>
-        <p>Find the perfect recipe based on your ingredients, time, and cravings!</p>
+        <h1>Votre Guide de Recettes</h1>
     </header>
-
     <main>
-        <!-- Search Form -->
-        <section id="search-form">
-            <h2>What do you want to cook?</h2>
+        <section id="form-section">
+            <h2>Entrez vos critères</h2>
             <form id="recipe-form">
-                <label for="cravings">Your cravings:</label>
-                <input type="text" id="cravings" name="cravings" placeholder="e.g., sweet, spicy, vegan">
+                <label for="craving">Envies :</label>
+                <input type="text" id="craving" name="craving" placeholder="Ex : sucré, salé, exotique">
 
-                <label for="ingredients">Ingredients you have:</label>
-                <textarea id="ingredients" name="ingredients" rows="4" placeholder="e.g., eggs, flour, milk"></textarea>
+                <label for="ingredients">Ingrédients :</label>
+                <input type="text" id="ingredients" name="ingredients" placeholder="Ex : œufs, lait, chocolat">
 
-                <label for="time">Time available (minutes):</label>
-                <input type="number" id="time" name="time" min="5" placeholder="e.g., 30">
+                <label for="time">Temps disponible (en minutes) :</label>
+                <input type="number" id="time" name="time" placeholder="Ex : 30">
 
-                <button type="submit">Find Recipes</button>
+                <button type="button" id="search-button">Rechercher</button>
             </form>
         </section>
-
-        <!-- Recipe Suggestions -->
-        <section id="recipe-results" style="display: none;">
-            <h2>Recipe Suggestions</h2>
-            <ul id="recipe-list"></ul>
+        <section id="results-section">
+            <h2>Suggestions de recettes</h2>
+            <ul id="results"></ul>
         </section>
-
-        <!-- Recipe Details -->
-        <section id="recipe-details" style="display: none;">
-            <h2 id="recipe-title"></h2>
-            <p><strong>Ingredients:</strong></p>
-            <ul id="recipe-ingredients"></ul>
-            <p><strong>Steps:</strong></p>
-            <ol id="recipe-steps"></ol>
-            <button id="back-button">Back to Results</button>
+        <section id="recipe-details">
+            <h2>Détails de la recette</h2>
+            <div id="details"></div>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
