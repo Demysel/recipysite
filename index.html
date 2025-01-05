@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <p>Find the perfect recipe based on your ingredients, time, and cravings!</p>
+    </header>
+
+    <main>
+        <!-- Search Form -->
+        <section id="search-form">
+            <h2>What do you want to cook?</h2>
+            <form id="recipe-form">
+                <label for="cravings">Your cravings:</label>
+                <input type="text" id="cravings" name="cravings" placeholder="e.g., sweet, spicy, vegan">
+
+                <label for="ingredients">Ingredients you have:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" placeholder="e.g., eggs, flour, milk"></textarea>
+
+                <label for="time">Time available (minutes):</label>
+                <input type="number" id="time" name="time" min="5" placeholder="e.g., 30">
+
+                <button type="submit">Find Recipes</button>
+            </form>
+        </section>
+
+        <!-- Recipe Suggestions -->
+        <section id="recipe-results" style="display: none;">
+            <h2>Recipe Suggestions</h2>
+            <ul id="recipe-list"></ul>
+        </section>
+
+        <!-- Recipe Details -->
+        <section id="recipe-details" style="display: none;">
+            <h2 id="recipe-title"></h2>
+            <p><strong>Ingredients:</strong></p>
+            <ul id="recipe-ingredients"></ul>
+            <p><strong>Steps:</strong></p>
+            <ol id="recipe-steps"></ol>
+            <button id="back-button">Back to Results</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
